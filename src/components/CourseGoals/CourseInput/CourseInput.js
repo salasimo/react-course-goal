@@ -11,6 +11,7 @@ const FormControl = styled.div`
         font-weight: bold;
         display: block;
         margin-bottom: 0.5rem;
+        color: ${(props) => (props.invalid ? "red" : "black")};
     }
 
     & input {
@@ -20,20 +21,14 @@ const FormControl = styled.div`
         font: inherit;
         line-height: 1.5rem;
         padding: 0 0.25rem;
+        background-color: ${(props) =>
+            props.invalid ? "#f9c0c0" : "transparent"};
     }
 
     & input:focus {
         outline: none;
         /* background: #fad0ec; */
         /* border-color: #8b005d; */
-    }
-
-    &.invalid input {
-        border-color: red;
-        background-color: #f7b5be;
-    }
-    &.invalid label {
-        color: red;
     }
 `;
 
